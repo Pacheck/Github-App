@@ -51,12 +51,12 @@ class App extends Component {
         )
         .then((result) => {
           this.setState({
-            [type]: [
-              {
-                name: result[0].name,
-                link: result[0].html_url,
-              },
-            ],
+            [type]: result.map((repo) => {
+              return {
+                name: repo.name,
+                link: repo.html_url,
+              };
+            }),
           });
         });
     };
