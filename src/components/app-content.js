@@ -2,6 +2,7 @@ import Search from './search';
 import UserInfo from './user-info';
 import Actions from './actions';
 import Repos from './repos';
+import Loading from './loading';
 
 import React from 'react';
 
@@ -12,13 +13,13 @@ const AppContent = ({
   handleSearch,
   getRepos,
   getStarred,
-  searchFieldDisabled,
+  isFetching,
 }) => (
   <div className="app">
-    <Search
-      handleSearch={handleSearch}
-      searchFieldDisabled={searchFieldDisabled}
-    />
+    <Search isDisabled={isFetching} handleSearch={handleSearch} />
+
+    {isFetching && <Loading />}
+
     {!!userinfo && <UserInfo userinfo={userinfo} />}
 
     {!!userinfo && <Actions getRepos={getRepos} getStarred={getStarred} />}
