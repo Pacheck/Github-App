@@ -14,17 +14,22 @@ class App extends Component {
     };
   }
 
-  // getStarred() {
-  //   console.log('favoritos');
-  // }
+  getGitHubApiUrl(username, type) {
+    const internalUser = username ? `/${username}` : '';
+    const internalType = type ? `/${type}` : '';
+    return `https://api.github.com/users${internalUser}${internalType}`;
+  }
 
   handleSearch(e) {
     const value = e.target.value;
     const keyCode = e.which || e.keyCode;
     const ENTER = 13;
+    const target = e.target;
+
     if (keyCode === ENTER) {
+      target.disabled = true;
       ajax()
-        .get(`https://api.github.com/users/${value}`)
+        .get(this.getGitHubApiUrl(value))
         .then((result) => {
           this.setState({
             userinfo: {
@@ -35,8 +40,13 @@ class App extends Component {
               followers: result.followers,
               following: result.following,
             },
+            repos: [],
+            starred: [],
           });
           console.log(result);
+        })
+        .always(() => {
+          target.disabled = false;
         });
     }
     return value;
@@ -44,11 +54,9 @@ class App extends Component {
 
   getRepos(type) {
     return (e) => {
-      console.log('type:' + type);
+      const username = this.state.userinfo.login;
       ajax()
-        .get(
-          `https://api.github.com/users/${this.state.userinfo.login}/${type}`
-        )
+        .get(this.getGitHubApiUrl(username, type))
         .then((result) => {
           this.setState({
             [type]: result.map((repo) => {
