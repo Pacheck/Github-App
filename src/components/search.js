@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Search = ({ handleSearch, searchFieldDisabled }) => (
+const Search = ({ handleSearch, isDisabled }) => (
   <div className="search">
     <input
       type="search"
-      disabled={searchFieldDisabled}
+      disabled={isDisabled}
       placeholder="Digite o nome do usuário no Github"
       onKeyUp={handleSearch}
     />
