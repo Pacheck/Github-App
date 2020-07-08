@@ -78,10 +78,7 @@ class App extends Component {
   render() {
     return (
       <AppContent
-        userinfo={this.state.userinfo}
-        repos={this.state.repos}
-        starred={this.state.starred}
-        isFetching={this.state.isFetching}
+        {...this.state}
         handleSearch={(e) => this.handleSearch(e)}
         getRepos={this.getRepos('repos')}
         getStarred={this.getRepos('starred')}
