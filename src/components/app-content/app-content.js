@@ -1,8 +1,8 @@
-import Search from './search';
-import UserInfo from './user-info';
-import Actions from './actions';
-import Repos from './repos';
-import Loading from './loading';
+import Search from '../search/search';
+import UserInfo from '../user-info/user-info';
+import Actions from '../actions/actions';
+import Repos from '../repos/repos';
+import Loading from '../loading/loading';
 
 import React from 'react';
 
