@@ -1,7 +1,8 @@
 import React from 'react';
+import Userinfo from './styles';
 
 const UserInfo = ({ userinfo }) => (
-  <div className="user-info">
+  <Userinfo className="user-info">
     <img src={userinfo.photo} alt="user_image"></img>
     <div className="git-info">
       <h1 className="user-name">
@@ -14,7 +15,7 @@ const UserInfo = ({ userinfo }) => (
         <li>Seguindo: {userinfo.following}</li>
       </ul>
     </div>
-  </div>
+  </Userinfo>
 );
 
 export default UserInfo;

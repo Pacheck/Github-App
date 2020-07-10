@@ -1,8 +1,9 @@
-import Search from '../search/search';
-import UserInfo from '../user-info/user-info';
-import Actions from '../actions/actions';
-import Repos from '../repos/repos';
-import Loading from '../loading/loading';
+import App from './styled';
+import Search from '../search';
+import UserInfo from '../user-info';
+import Actions from '../actions';
+import Repos from '../repos';
+import Loading from '../loading';
 
 import React from 'react';
 
@@ -15,7 +16,7 @@ const AppContent = ({
   getStarred,
   isFetching,
 }) => (
-  <div className="app">
+  <App className="app">
     <Search isDisabled={isFetching} handleSearch={handleSearch} />
 
     {isFetching && <Loading />}
@@ -30,7 +31,7 @@ const AppContent = ({
     {!!starred.length && (
       <Repos className="Starred" title="Favoritos" repos={starred} />
     )}
-  </div>
+  </App>
 );
 
 export default AppContent;

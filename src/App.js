@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './css/index.css';
-import AppContent from './components/app-content/app-content';
+//import './css/index.css';
+import AppContent from './components/app-content';
 import ajax from '@fdaciuk/ajax';
 
 class App extends Component {
