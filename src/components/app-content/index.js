@@ -25,12 +25,14 @@ const AppContent = ({
 
     {!!userinfo && <Actions getRepos={getRepos} getStarred={getStarred} />}
 
-    {!!repos.length && (
-      <Repos className="Repos" title="Repositórios" repos={repos} />
-    )}
-    {!!starred.length && (
-      <Repos className="Starred" title="Favoritos" repos={starred} />
-    )}
+    <div className="repo-flex">
+      {!!repos.length && (
+        <Repos className="Repos" title="Repositórios" repos={repos} />
+      )}
+      {!!starred.length && (
+        <Repos className="Starred" title="Favoritos" repos={starred} />
+      )}
+    </div>
   </App>
 );
 

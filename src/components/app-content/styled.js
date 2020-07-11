@@ -8,6 +8,12 @@ const App = styled.div`
   padding: 25px;
   background-color: blanchedalmond;
   border-radius: 15px;
+
+  .repo-flex {
+    margin: 0 auto;
+    display: flex;
+    padding: 10px;
+  }
 `;
 
 export default App;
