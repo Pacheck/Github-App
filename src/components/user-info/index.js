@@ -3,7 +3,9 @@ import Userinfo from './styles';
 
 const UserInfo = ({ userinfo }) => (
   <Userinfo className="user-info">
+    <container></container>
     <img src={userinfo.photo} alt="user_image"></img>
+
     <div className="git-info">
       <h1 className="user-name">
         <a href={`https://github.com/${userinfo.login}`}>{userinfo.username}</a>
