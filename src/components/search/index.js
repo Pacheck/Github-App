@@ -2,14 +2,14 @@ import React from 'react';
 import InputSearch from './styles';
 
 const Search = ({ handleSearch, isDisabled }) => (
-  <div className="search">
-    <InputSearch
+  <InputSearch className="search">
+    <input
       type="search"
       disabled={isDisabled}
       placeholder="Digite o nome do usuário no Github"
       onKeyUp={handleSearch}
     />
-  </div>
+  </InputSearch>
 );
 
 export default Search;
