@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 const App = styled.div`
+  margin: 0 auto;
+  display: grid;
+  max-width: 800px;
   padding: 25px;
-  /*width: 500px;*/
   background-color: blanchedalmond;
   border-radius: 15px;
 `;

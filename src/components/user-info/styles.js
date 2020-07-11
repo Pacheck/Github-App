@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 const UserInfo = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+
   img {
     height: 200px;
     width: 200px;
@@ -9,12 +12,10 @@ const UserInfo = styled.div`
     border-radius: 15px;
   }
   .user-info {
+    display: flex;
   }
 
   .git-info {
-    display: inline-block;
-    margin: 10px;
-    top: 50%;
   }
 
   .user-name a {
