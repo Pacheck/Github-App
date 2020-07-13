@@ -1,14 +1,19 @@
 import styled from 'styled-components';
 
 const StyledRepos = styled.div`
-  margin: 0 auto;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   padding: 20px;
 
-  div {
-    margin: 0 auto;
+  h2 {
+    align-items: center;
   }
+
+  ul {
+    padding: 0px;
+  }
+
   li {
     list-style: none;
   }
