@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-//import './css/index.css';
 import AppContent from './components/app-content';
 import ajax from '@fdaciuk/ajax';
+import GlobalStyle from './styles/global';
 
 class App extends Component {
   constructor() {
@@ -76,12 +76,16 @@ class App extends Component {
 
   render() {
     return (
-      <AppContent
-        {...this.state}
-        handleSearch={(e) => this.handleSearch(e)}
-        getRepos={this.getRepos('repos')}
-        getStarred={this.getRepos('starred')}
-      />
+      <>
+        <GlobalStyle whiteColor />
+        <AppContent
+          whiteColor
+          {...this.state}
+          handleSearch={(e) => this.handleSearch(e)}
+          getRepos={this.getRepos('repos')}
+          getStarred={this.getRepos('starred')}
+        />
+      </>
     );
   }
 }
