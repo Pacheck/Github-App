@@ -1,4 +1,4 @@
-import App from './styled';
+import App from './styles';
 import Search from '../search';
 import UserInfo from '../user-info';
 import Actions from '../actions';
@@ -16,22 +16,24 @@ const AppContent = ({
   getStarred,
   isFetching,
 }) => (
-  <App className="app">
-    <Search isDisabled={isFetching} handleSearch={handleSearch} />
+  <App className="app" whiteColor={false}>
+    <div className="container">
+      <Search isDisabled={isFetching} handleSearch={handleSearch} />
 
-    {isFetching && <Loading />}
+      {isFetching && <Loading />}
 
-    {!!userinfo && <UserInfo userinfo={userinfo} />}
+      {!!userinfo && <UserInfo userinfo={userinfo} />}
 
-    {!!userinfo && <Actions getRepos={getRepos} getStarred={getStarred} />}
+      {!!userinfo && <Actions getRepos={getRepos} getStarred={getStarred} />}
 
-    <div className="repo-flex">
-      {!!repos.length && (
-        <Repos className="Repos" title="Repositórios" repos={repos} />
-      )}
-      {!!starred.length && (
-        <Repos className="Starred" title="Favoritos" repos={starred} />
-      )}
+      <div className="repo-flex">
+        {!!repos.length && (
+          <Repos className="Repos" title="Repositórios" repos={repos} />
+        )}
+        {!!starred.length && (
+          <Repos className="Starred" title="Favoritos" repos={starred} />
+        )}
+      </div>
     </div>
   </App>
 );

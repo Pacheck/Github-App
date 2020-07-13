@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
 const UserInfo = styled.div`
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  padding: 10px;
+  justify-content: space-evenly;
+  margin: 16px 0px;
+  align-items: center;
 
   text-decoration: none;
 
   img {
     height: 200px;
     width: 200px;
-    padding: 10px;
     border-radius: 50%;
   }
 
@@ -25,7 +25,6 @@ const UserInfo = styled.div`
 
   .git-info {
     box-sizing: content-box;
-    margin: 0 auto;
   }
 
   .user-name a {
@@ -34,11 +33,7 @@ const UserInfo = styled.div`
     text-decoration: none;
   }
 
-  .repos-info {
-    margin: 0 auto;
-  }
-
-  @media (max-width: 515px) {
+  @media (max-width: 524px) {
     display: grid;
     grid-template-columns: 1fr;
   }

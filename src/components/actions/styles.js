@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Botao = styled.button`
   width: 200px;
   height: 50px;
-  margin: 0 auto;
   border: 0px solid;
   border-radius: 6px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -11,13 +10,19 @@ export const Botao = styled.button`
 `;
 
 export const Act = styled.div`
-  margin: 0 auto;
+  justify-content: space-evenly;
+  width: 100%;
+  display: flex;
 
   button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 5px;
+    padding: 20px;
   }
 
-  @media (max-width: 515px) {
+  @media (max-width: 524px) {
     display: grid;
     grid-template-columns: 1fr;
   }
