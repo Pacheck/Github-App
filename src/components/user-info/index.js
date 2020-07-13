@@ -3,7 +3,6 @@ import Userinfo from './styles';
 
 const UserInfo = ({ userinfo }) => (
   <Userinfo className="user-info">
-    <container></container>
     <img src={userinfo.photo} alt="user_image"></img>
 
     <div className="git-info">

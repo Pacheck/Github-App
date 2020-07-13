@@ -37,6 +37,11 @@ const UserInfo = styled.div`
   .repos-info {
     margin: 0 auto;
   }
+
+  @media (max-width: 515px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 `;
 
 export default UserInfo;

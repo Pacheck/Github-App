@@ -16,6 +16,11 @@ export const Act = styled.div`
   button {
     margin: 5px;
   }
+
+  @media (max-width: 515px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 `;
 
 export default Botao;
