@@ -16,7 +16,8 @@ const App = styled.div`
     flex-direction: column;
 
     padding: 25px;
-    background-color: ${(props) => (props.whiteColor ? '#FFF' : '#2e2e2e')};
+    background-color: ${(props) =>
+      props.Tema === 'whiteColor' ? '#FFF' : '#2e2e2e'};
     border-radius: 15px;
 
     .repo-flex {

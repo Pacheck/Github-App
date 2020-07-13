@@ -9,8 +9,9 @@ const GlobalStyle = createGlobalStyle`
 }
 
 body {  
-    color: ${(props) => (props.whiteColor ? 'white' : 'black')};
-    background-color: ${(props) => (props.whiteColor ? 'white' : '#121212')}
+    color: ${(props) => (props.theme === 'whiteColor' ? 'black' : 'white')};
+    background-color: ${(props) =>
+      props.theme === 'whiteColor' ? 'white' : '#121212'}
 }`;
 
 export default GlobalStyle;

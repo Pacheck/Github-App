@@ -15,8 +15,9 @@ const AppContent = ({
   getRepos,
   getStarred,
   isFetching,
+  theme,
 }) => (
-  <App className="app" whiteColor={false}>
+  <App className="app" Tema={theme}>
     <div className="container">
       <Search isDisabled={isFetching} handleSearch={handleSearch} />
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AppContent from './components/app-content';
 import ajax from '@fdaciuk/ajax';
 import GlobalStyle from './styles/global';
+import Tema from './components/theme';
 
 class App extends Component {
   constructor() {
@@ -11,6 +12,7 @@ class App extends Component {
       repos: [],
       starred: [],
       isFetching: false,
+      theme: null,
     };
   }
 
@@ -74,17 +76,24 @@ class App extends Component {
     };
   }
 
+  hClick(e) {
+    const checked = e.target.checked;
+    checked
+      ? this.setState({ theme: 'whiteColor' })
+      : this.setState({ theme: 'blackColor' });
+  }
+
   render() {
     return (
       <>
-        <GlobalStyle whiteColor />
+        <GlobalStyle {...this.state} />
         <AppContent
-          whiteColor
           {...this.state}
           handleSearch={(e) => this.handleSearch(e)}
           getRepos={this.getRepos('repos')}
           getStarred={this.getRepos('starred')}
         />
+        <Tema hClick={(e) => this.hClick(e)} />
       </>
     );
   }
