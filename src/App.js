@@ -12,7 +12,7 @@ class App extends Component {
       repos: [],
       starred: [],
       isFetching: false,
-      theme: null,
+      isDark: false,
     };
   }
 
@@ -78,9 +78,10 @@ class App extends Component {
 
   hClick(e) {
     const checked = e.target.checked;
-    checked
-      ? this.setState({ theme: 'whiteColor' })
-      : this.setState({ theme: 'blackColor' });
+    this.setState({ isDark: checked });
+    // checked
+    //   ? this.setState({ theme: 'whiteColor' })
+    //   : this.setState({ theme: 'blackColor' });
   }
 
   render() {
