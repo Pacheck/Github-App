@@ -1,19 +1,24 @@
 import styled from 'styled-components';
 
 const App = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 800px;
-  min-width: 324px;
+  flex-direction: column;
+
+  min-height: 100vh;
+  width: 100%;
 
   .container {
     display: flex;
-    flex: 1;
+
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    width: 100%;
+    max-width: 800px;
+    min-width: 250px;
 
     padding: 25px;
     background-color: ${(props) => (props.isDark ? '#FFF' : '#2e2e2e')};

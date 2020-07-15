@@ -79,14 +79,13 @@ class App extends Component {
   hClick(e) {
     const checked = e.target.checked;
     this.setState({ isDark: checked });
-    // checked
-    //   ? this.setState({ theme: 'whiteColor' })
-    //   : this.setState({ theme: 'blackColor' });
   }
 
   render() {
     return (
       <>
+        <Tema hClick={(e) => this.hClick(e)} />
+
         <GlobalStyle {...this.state} />
         <AppContent
           {...this.state}
@@ -94,7 +93,6 @@ class App extends Component {
           getRepos={this.getRepos('repos')}
           getStarred={this.getRepos('starred')}
         />
-        <Tema hClick={(e) => this.hClick(e)} />
       </>
     );
   }
