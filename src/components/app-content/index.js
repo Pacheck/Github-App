@@ -16,27 +16,35 @@ const AppContent = ({
   getStarred,
   isFetching,
   isDark,
-}) => (
-  <App className="app" isDark={isDark}>
-    <div className="container">
-      <Search isDisabled={isFetching} handleSearch={handleSearch} />
+}) => {
+  return (
+    <App className="app" isDark={isDark}>
+      <div className="container">
+        <Search isDisabled={isFetching} handleSearch={handleSearch} />
 
-      {isFetching && <Loading />}
+        {isFetching && <Loading />}
 
-      {!!userinfo && <UserInfo userinfo={userinfo} />}
+        {!!userinfo && <UserInfo userinfo={userinfo} />}
 
-      {!!userinfo && <Actions getRepos={getRepos} getStarred={getStarred} />}
-
-      <div className="repo-flex">
-        {!!repos.length && (
-          <Repos className="Repos" title="Repositórios" repos={repos} />
+        {!!userinfo && (
+          <Actions
+            getRepos={getRepos}
+            getStarred={getStarred}
+            isDark={isDark}
+          />
         )}
-        {!!starred.length && (
-          <Repos className="Starred" title="Favoritos" repos={starred} />
-        )}
+
+        <div className="repo-flex">
+          {!!repos.length && (
+            <Repos className="Repos" title="Repositórios" repos={repos} />
+          )}
+          {!!starred.length && (
+            <Repos className="Starred" title="Favoritos" repos={starred} />
+          )}
+        </div>
       </div>
-    </div>
-  </App>
-);
+    </App>
+  );
+};
 
 export default AppContent;

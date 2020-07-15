@@ -6,7 +6,8 @@ export const Botao = styled.button`
   border: 0px solid;
   border-radius: 6px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #c3e2e3;
+  /* background-color: #c3e2e3; */
+  background-color: ${(props) => (props.isDark ? '##c3e2e3' : '#e5e0e0')};
 `;
 
 export const Act = styled.div`
