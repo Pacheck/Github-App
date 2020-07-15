@@ -4,7 +4,6 @@ import UserInfo from '../user-info';
 import Actions from '../actions';
 import Repos from '../repos';
 import Loading from '../loading';
-import Tema from '../theme/index';
 
 import React from 'react';
 

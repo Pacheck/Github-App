@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import AppContent from './components/app-content';
 import ajax from '@fdaciuk/ajax';
 import GlobalStyle from './styles/global';
-import Tema from './components/theme';
+import Switch from './components/theme/index';
 
 class App extends Component {
   constructor() {
@@ -84,7 +84,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <Tema hClick={(e) => this.hClick(e)} />
+        <Switch hClick={(e) => this.hClick(e)} />
 
         <GlobalStyle {...this.state} />
         <AppContent
