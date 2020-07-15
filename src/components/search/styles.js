@@ -5,6 +5,7 @@ const InputSearch = styled.div`
   width: 100%;
 
   input {
+    padding: 0px 10px;
     flex: 1;
     height: 35px;
     border-radius: 5px;
