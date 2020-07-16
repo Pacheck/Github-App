@@ -28,6 +28,7 @@ const UserInfo = styled.div`
   }
 
   .user-name a {
+    font-family: 'Rowdies', cursive;
     color: blueviolet;
     padding: 3px;
     text-decoration: none;

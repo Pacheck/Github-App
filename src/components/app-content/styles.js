@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 const App = styled.div`
+  @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+
   display: flex;
   align-items: center;
   justify-content: center;
