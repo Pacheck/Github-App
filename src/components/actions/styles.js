@@ -5,9 +5,12 @@ export const Botao = styled.button`
   height: 50px;
   border: 0px solid;
   border-radius: 6px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Rowdies', cursive;
 
-  background-color: ${(props) => (props.isDark ? '#c3e2e3' : '#e5e0e0')};
+  ${(props) =>
+    props.isDark
+      ? 'background-color: #F3F4F6; border: solid 1px #b8babc; color: #000'
+      : 'background-color: #1d2121; border: solid 1px #c3e2e3; color: #FFF'}
 `;
 
 export const Act = styled.div`
@@ -24,8 +27,11 @@ export const Act = styled.div`
   }
 
   @media (max-width: 524px) {
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     grid-template-columns: 1fr;
+    flex-direction: column;
   }
 `;
 
