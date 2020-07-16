@@ -34,8 +34,13 @@ const UserInfo = styled.div`
   }
 
   @media (max-width: 524px) {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      display: flex;
+      justify-content: center;
+    }
   }
 `;
 
