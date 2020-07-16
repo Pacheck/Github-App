@@ -17,6 +17,16 @@ const StyledRepos = styled.div`
   li {
     list-style: none;
   }
+
+  a {
+  }
+
+  @media (max-width: 524px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export default StyledRepos;
