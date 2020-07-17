@@ -1,8 +1,8 @@
 import React from 'react';
 import StyledRepos from './styles';
 
-const Repos = ({ className, title, repos }) => (
-  <StyledRepos className="className">
+const Repos = ({ className, title, repos, isDark }) => (
+  <StyledRepos className="className" isDark={isDark}>
     <h2>{title}</h2>
     <ul>
       {repos.map((repo, index) => (

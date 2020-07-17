@@ -36,10 +36,20 @@ const AppContent = ({
 
         <div className="repo-flex">
           {!!repos.length && (
-            <Repos className="Repos" title="Repositórios" repos={repos} />
+            <Repos
+              className="Repos"
+              title="Repositórios"
+              repos={repos}
+              isDark={isDark}
+            />
           )}
           {!!starred.length && (
-            <Repos className="Starred" title="Favoritos" repos={starred} />
+            <Repos
+              className="Starred"
+              title="Favoritos"
+              repos={starred}
+              isDark={isDark}
+            />
           )}
         </div>
       </div>
