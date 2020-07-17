@@ -6,9 +6,11 @@ const StyledRepos = styled.div`
   flex-wrap: wrap;
   padding: 20px;
   width: 100%;
+  align-content: center;
 
   h2 {
-    align-items: center;
+    display: flex;
+    justify-items: center;
   }
 
   ul {
@@ -21,9 +23,20 @@ const StyledRepos = styled.div`
   }
 
   a {
-    text-decoration: none;
-    color: red;
+    display: flex;
+
+    border: 1px solid #c3e2e3;
+    border-radius: 10px;
+
+    background-color: #1d2121;
+    color: #fff;
+    font-family: 'Rowdies', cursive;
+
     padding: 20px;
+    margin: 10px 0px;
+
+    text-decoration: none;
+    justify-content: center;
   }
 
   @media (max-width: 524px) {
