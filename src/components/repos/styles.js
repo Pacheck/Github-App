@@ -5,6 +5,7 @@ const StyledRepos = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   padding: 20px;
+  width: 100%;
 
   h2 {
     align-items: center;
@@ -16,9 +17,13 @@ const StyledRepos = styled.div`
 
   li {
     list-style: none;
+    align-items: center;
   }
 
   a {
+    text-decoration: none;
+    color: red;
+    padding: 20px;
   }
 
   @media (max-width: 524px) {

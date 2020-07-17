@@ -9,7 +9,6 @@ const App = styled.div`
   flex-direction: column;
 
   min-height: 100vh;
-  width: 100%;
 
   .container {
     display: flex;

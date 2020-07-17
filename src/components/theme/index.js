@@ -1,10 +1,3 @@
-// import React from 'react';
-
-// const Switch = ({ hClick }) => <input type="checkbox" onClick={hClick} />;
-
-// export default Switch;
-// //
-
 import React from 'react';
 import './index.css';
 
