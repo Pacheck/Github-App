@@ -3,7 +3,8 @@ import StyledRepos from './styles';
 
 const Repos = ({ className, title, repos, isDark }) => (
   <StyledRepos className="className" isDark={isDark}>
-    <h2>{title}</h2>
+    <h2 className="titulo">{title}</h2>
+
     <ul>
       {repos.map((repo, index) => (
         <li key={index}>

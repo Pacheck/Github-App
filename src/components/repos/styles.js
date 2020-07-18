@@ -14,8 +14,13 @@ const StyledRepos = styled.div`
     justify-items: center;
   }
 
+  .titulo {
+  }
+
   ul {
     padding: 0px;
+    width: 100%;
+    max-width: 375px;
   }
 
   li {
