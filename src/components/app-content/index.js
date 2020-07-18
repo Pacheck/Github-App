@@ -4,6 +4,7 @@ import UserInfo from '../user-info';
 import Actions from '../actions';
 import Repos from '../repos';
 import Loading from '../loading';
+import Divider from '../divider';
 
 import React from 'react';
 
@@ -33,6 +34,8 @@ const AppContent = ({
             isDark={isDark}
           />
         )}
+
+        {(!!repos.length || !!starred.length) && <Divider />}
 
         <div className="repo-flex">
           {!!repos.length && (
