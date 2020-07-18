@@ -24,37 +24,44 @@ class App extends Component {
 
   handleSearch(e) {
     const value = e.target.value;
+    console.log(value);
     const keyCode = e.which || e.keyCode;
     const ENTER = 13;
 
-    if (keyCode === ENTER) {
-      this.setState({
-        isFetching: true,
-      });
-
-      ajax()
-        .get(this.getGitHubApiUrl(value))
-        .then((result) => {
-          this.setState({
-            userinfo: {
-              username: result.name,
-              photo: result.avatar_url,
-              login: result.login,
-              repos: result.public_repos,
-              followers: result.followers,
-              following: result.following,
-            },
-            repos: [],
-            starred: [],
-          });
-          console.log(result);
-        })
-        .always(() => {
-          this.setState({
-            isFetching: false,
-          });
+    if (value) {
+      if (keyCode === ENTER) {
+        this.setState({
+          isFetching: true,
         });
+
+        ajax()
+          .get(this.getGitHubApiUrl(value))
+          .then((result) => {
+            this.setState({
+              userinfo: {
+                username: result.name,
+                photo: result.avatar_url,
+                login: result.login,
+                repos: result.public_repos,
+                followers: result.followers,
+                following: result.following,
+              },
+              repos: [],
+              starred: [],
+            });
+            console.log(result);
+          })
+          .catch((err) => console.log(err), alert('O usuário não existe!'))
+          .always(() => {
+            this.setState({
+              isFetching: false,
+            });
+          });
+      }
+    } else {
+      console.error('Digite um valor para pesquisar');
     }
+
     return value;
   }
 
