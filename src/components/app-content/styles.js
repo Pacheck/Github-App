@@ -8,6 +8,8 @@ const App = styled.div`
   justify-content: center;
   flex-direction: column;
 
+  min-width: 425px;
+
   min-height: 100vh;
 
   .container {
@@ -19,7 +21,7 @@ const App = styled.div`
 
     width: 100%;
     max-width: 800px;
-    min-width: 250px;
+    min-width: 425px;
 
     padding: 25px;
     background-color: ${(props) => (props.isDark ? '#FFF' : '#2e2e2e')};
