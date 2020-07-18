@@ -36,14 +36,18 @@ const StyledRepos = styled.div`
 
     border-radius: 10px;
 
-    /* background-color: #1d2121;
-    color: #fff; */
-
     padding: 20px;
     margin: 10px 0px;
 
     text-decoration: none;
     justify-content: center;
+
+    :hover {
+      color: #000;
+      background-color: #d1caca;
+      transition: background-color 700ms;
+      transition: color 400ms;
+    }
   }
 
   @media (max-width: 524px) {

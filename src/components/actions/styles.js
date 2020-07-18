@@ -7,6 +7,13 @@ export const Botao = styled.button`
   border-radius: 6px;
   font-family: 'Rowdies', cursive;
 
+  :hover {
+    color: #000;
+    background-color: #d1caca;
+    transition: background-color 700ms;
+    transition: color 400ms;
+  }
+
   ${(props) =>
     props.isDark
       ? 'background-color: #F3F4F6; border: solid 1px #b8babc; color: #000'
