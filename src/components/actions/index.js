@@ -1,5 +1,5 @@
 import React from 'react';
-import { Botao, Act, Hr } from './styles';
+import { Botao, Act } from './styles';
 
 const Actions = ({ getRepos, getStarred, isDark }) => (
   <>
@@ -11,7 +11,6 @@ const Actions = ({ getRepos, getStarred, isDark }) => (
         Ver favoritos
       </Botao>
     </Act>
-    {!!getRepos && <Hr></Hr>}
   </>
 );
 

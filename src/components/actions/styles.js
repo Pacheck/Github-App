@@ -20,12 +20,6 @@ export const Botao = styled.button`
       : 'background-color: #1d2121; border: solid 1px #c3e2e3; color: #FFF'}
 `;
 
-export const Hr = styled.hr`
-  border-top: 1px solid #fefe;
-  margin-top: 10px;
-  width: 100%;
-`;
-
 export const Act = styled.div`
   justify-content: space-evenly;
   width: 100%;
