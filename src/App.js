@@ -4,6 +4,10 @@ import ajax from '@fdaciuk/ajax';
 import GlobalStyle from './styles/global';
 import Switch from './components/theme/index';
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+toast.configure();
 class App extends Component {
   constructor() {
     super();
@@ -50,8 +54,12 @@ class App extends Component {
               starred: [],
             });
             console.log(result);
+            this.notify('success', 'Carregado com sucesso!');
           })
-          .catch((err) => console.log(err), alert('O usuário não existe!'))
+          .catch((err) => {
+            console.log(err);
+            this.notify('error', 'Não foi possível encontrar');
+          })
           .always(() => {
             this.setState({
               isFetching: false,
@@ -65,6 +73,7 @@ class App extends Component {
     return value;
   }
 
+  // Repos requester
   getRepos(type) {
     return (e) => {
       const username = this.state.userinfo.login;
@@ -83,16 +92,27 @@ class App extends Component {
     };
   }
 
+  // Theme color clickHandler
   hClick(e) {
     const checked = e.target.checked;
     this.setState({ isDark: checked });
+  }
+
+  // Toast Notification
+  notify(type, message) {
+    if (type === 'success') {
+      toast.success(message, {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    } else {
+      toast.error(message);
+    }
   }
 
   render() {
     return (
       <>
         <Switch hClick={(e) => this.hClick(e)} />
-
         <GlobalStyle {...this.state} />
         <AppContent
           {...this.state}
