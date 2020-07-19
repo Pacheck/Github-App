@@ -53,6 +53,22 @@ const StyledRepos = styled.div`
       transition: background-color 700ms;
       transition: color 400ms;
     }
+
+    :focus {
+      /* background-color: #d1caca;
+      ${(props) => (props.isDark ? 'color: #000' : 'color: #000')} */
+
+      /* border: 2px solid; */
+      border-radius: 10px;
+      border-image-slice: 1;
+      border-image-source: conic-gradient(
+        hsl(100 100% 60%),
+        hsl(200 100% 60%),
+        hsl(100 100% 60%),
+        hsl(200 100% 60%)
+      )
+
+    }
   }
 
   @media (max-width: 524px) {
