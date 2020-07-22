@@ -47,13 +47,15 @@ const StyledRepos = styled.div`
     text-decoration: none;
     justify-content: center;
 
-    :hover {
-      // color: #000;  
-      // background-color: #d1caca;
-      // transition: background-color 700ms;
-      // transition: color 400ms;
 
-      background: linear-gradient(45deg, 
+    :hover {
+      /* color: #000;  
+      background-color: #d1caca;
+      transition: background-color 700ms;
+      transition: color 400ms; */
+
+
+      /* background: linear-gradient(45deg, 
         rgb(255, 0, 0), 
         rgb(255, 115, 0), 
         rgb(255, 251, 0), 
@@ -63,24 +65,37 @@ const StyledRepos = styled.div`
         rgb(122, 0, 255),
         rgb(255, 0, 200), 
         rgb(255, 0, 0)
-      ) 0% 0  %  400%;
+      ) 0% 0  /  400%; */
 
-      background-image: linear-gradient(45deg, 
+      background-image: linear-gradient(
+        45deg, 
         rgb(255, 0, 0), 
         rgb(255, 115, 0), 
-        rgb(255, 251, 0), 
+        rgb(255, 251, 0),
         rgb(72, 255, 0), 
         rgb(0, 255, 213), 
         rgb(0, 43, 255), 
         rgb(122, 0, 255), 
         rgb(255, 0, 200), 
-        rgb(255, 0, 0));
+        rgb(255, 0, 0)
+      );
 
-        transition: opacity 0.3s ease-in-out 0s;
-        transition-property: opacity;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-in-out;
-        transition-delay: 0s;
+
+      animation: 20s linear 0s infinite normal none running dvWuPe;
+      /* animation-duration: 20s;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      animation-fill-mode: none;
+      animation-play-state: running;
+      animation-name: dvWuPe; */
+
+      transition: opacity 0.3s ease-in-out 0s;
+      /* transition-property: opacity;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+      transition-delay: 0s;         */
 
         //End Hover
     }
