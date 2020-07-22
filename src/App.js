@@ -100,27 +100,17 @@ class App extends Component {
 
   // Toast Notification
   notify(type, message) {
-    if (this.state.isDark) {
-      if (type === 'success') {
-        toast.success(message, {
-          position: toast.POSITION.TOP_CENTER,
-        });
-      } else {
-        toast.error(message, {
-          position: toast.POSITION.TOP_CENTER,
-        });
-      }
+    
+    if (type === 'success') {
+      toast.success(message, {
+        position: toast.POSITION.TOP_CENTER,
+      });
     } else {
-      if (type === 'success') {
-        toast.dark(message, {
-          position: toast.POSITION.TOP_CENTER,
-        });
-      } else {
-        toast.dark(message, {
-          position: toast.POSITION.TOP_CENTER,
-        });
-      }
+      toast.error(message, {
+        position: toast.POSITION.TOP_CENTER,
+      });
     }
+  
   }
 
   render() {
