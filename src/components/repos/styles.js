@@ -73,7 +73,11 @@ const StyledRepos = styled.div`
       ); */
 
       @keyframes linkHover{
-        0% {box-shadow: 0 0 1em aquamarine;}
+        0% {box-shadow: 0 0 1em yellow}
+        25% {box-shadow: 0 0 1em red}
+        50% {box-shadow: 0 0 1em blue}
+        75% {box-shadow: 0 0 1em green}
+        100% {box-shadow: 0 0 1em yellow}
       }
 
 
