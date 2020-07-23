@@ -36,8 +36,8 @@ const StyledRepos = styled.div`
 
     ${(props) =>
       props.isDark
-        ? 'background-color: #F3F4F6; border: solid 1px #b8babc; color: #000;'
-        : 'background-color: #1d2121; border: solid 1px #c3e2e3; color: #FFF;'}
+      ? 'background-color: #F3F4F6; border: solid 1px #b8babc; color: #000;'
+      : 'background-color: #1d2121; border: solid 1px #c3e2e3; color: #FFF;'}
 
     border-radius: 10px;
 
@@ -47,6 +47,8 @@ const StyledRepos = styled.div`
     text-decoration: none;
     justify-content: center;
 
+
+    animation: linkHover 10s linear 0s infinite normal none running;
 
     :hover {
       /* color: #000;  
@@ -80,8 +82,11 @@ const StyledRepos = styled.div`
         rgb(255, 0, 0)
       );
 
+      @keyframes linkHover{
+       
+      }
 
-      animation: 20s linear 0s infinite normal none running dvWuPe;
+
       /* animation-duration: 20s;
       animation-timing-function: linear;
       animation-delay: 0s;
