@@ -50,11 +50,11 @@ const StyledRepos = styled.div`
 
 
     :hover {
-      animation: linkHover 3s linear 0s infinite normal none running;
-      /* color: #000;  
+      animation: linkHover 5s linear 0s infinite normal none running;
+      color: #000;  
       background-color: #d1caca;
       transition: background-color 700ms;
-      transition: color 400ms; */
+      transition: color 400ms;
 
       box-shadow: 0 0 1em gold;
 
