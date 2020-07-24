@@ -58,20 +58,6 @@ const StyledRepos = styled.div`
 
       box-shadow: 0 0 1em gold;
 
-
-      /* background-image: linear-gradient(
-        45deg, 
-        rgb(255, 0, 0), 
-        rgb(255, 115, 0), 
-        rgb(255, 251, 0),
-        rgb(72, 255, 0), 
-        rgb(0, 255, 213), 
-        rgb(0, 43, 255), 
-        rgb(122, 0, 255), 
-        rgb(255, 0, 200), 
-        rgb(255, 0, 0)
-      ); */
-
       @keyframes linkHover{
         0% {box-shadow: 0 0 1em yellow}
         25% {box-shadow: 0 0 1em red}
@@ -80,30 +66,12 @@ const StyledRepos = styled.div`
         100% {box-shadow: 0 0 1em yellow}
       }
 
-
-      /* animation-duration: 20s;
-      animation-timing-function: linear;
-      animation-delay: 0s;
-      animation-iteration-count: infinite;
-      animation-direction: normal;
-      animation-fill-mode: none;
-      animation-play-state: running;
-      animation-name: dvWuPe; */
-
       transition: opacity 0.3s ease-in-out 0s;
-      /* transition-property: opacity;
-      transition-duration: 0.3s;
-      transition-timing-function: ease-in-out;
-      transition-delay: 0s;         */
-
-        //End Hover
+      //End Hover
     }
 
     :focus {
-      /* background-color: #d1caca;
-      ${(props) => (props.isDark ? 'color: #000' : 'color: #000')} */
-
-      /* border: 2px solid; */
+    
       border-radius: 10px;
       border-image-slice: 1;
       border-image-source: conic-gradient(
